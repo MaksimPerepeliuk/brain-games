@@ -4,4 +4,6 @@
 
 [![Build Status](https://travis-ci.com/MaksimPerepeliuk/project-lvl1-s508.svg?branch=master)](https://travis-ci.com/MaksimPerepeliuk/project-lvl1-s508)
 
+[![asciicast](https://asciinema.org/a/CG716ASrmsFovBdZpCS19B8yW.svg)](https://asciinema.org/a/CG716ASrmsFovBdZpCS19B8yW)
+
 
