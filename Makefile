@@ -3,11 +3,14 @@
 install:
 	npm install
 
-start calc:
+brain-even:
+	npx babel-node src/bin/brain-even.js
+
+brain-calc:
 	npx babel-node src/bin/brain-calc.js
 
-start even:
-	npx babel-node src/bin/brain-even.js
+brain-gcd:
+	npx babel-node src/bin/brain-gcd.js
 
 publish:
 	npm publish --dry-run
