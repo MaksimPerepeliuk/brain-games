@@ -4,6 +4,7 @@
 
 [![Build Status](https://travis-ci.com/MaksimPerepeliuk/project-lvl1-s508.svg?branch=master)](https://travis-ci.com/MaksimPerepeliuk/project-lvl1-s508)
 
-[![asciicast](https://asciinema.org/a/CG716ASrmsFovBdZpCS19B8yW.svg)](https://asciinema.org/a/CG716ASrmsFovBdZpCS19B8yW)
+Install package and start games:
+[![asciicast](https://asciinema.org/a/3w6wt2UoaW4kCJqO9EsDXKoBg.svg)](https://asciinema.org/a/3w6wt2UoaW4kCJqO9EsDXKoBg)
 
 

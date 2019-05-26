@@ -1,12 +1,7 @@
 import readlineSync from 'readline-sync';
 
-const getRandomNumber = () => Math.floor(Math.random() * 50);
-const isEven = num => num % 2 === 0;
-
-export default () => {
-  console.log(`Welcome to the Brain Games! 
-  Answer 'yes' if number even otherwise answer 'no'.\n`);
-
+export default (randomValue, getCorrectAnswer, rules) => {
+  console.log(`Welcome to the Brain Games!\n${rules}\n`);
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!\n`);
   const iter = (acc) => {
@@ -14,17 +9,15 @@ export default () => {
       return console.log(`Congratulations, ${userName}!`);
     }
 
-    const randomNum = getRandomNumber();
-    const userAnswer = readlineSync.question(`${randomNum}: `);
-    const correctAnswer = isEven(randomNum) ? 'yes' : 'no';
-    if (correctAnswer === userAnswer) {
-      console.log('correct!');
+    const random = randomValue();
+    const userAnswer = readlineSync.question(`Question: ${random}: `);
+    const correctAnswer = `${getCorrectAnswer(random)}`;
+    if (userAnswer === correctAnswer) {
+      console.log('Correct!');
       return iter(acc + 1);
     }
 
-    console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.
-    Let's try again, Bill!`);
-
+    console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${userName}!`);
     return iter(acc);
   };
 
