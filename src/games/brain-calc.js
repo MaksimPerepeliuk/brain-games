@@ -2,8 +2,8 @@ export const getRandomValue = () => {
   const randomNum1 = Math.floor(Math.random() * 50);
   const randomNum2 = Math.floor(Math.random() * 50);
   const operators = ['+', '-', '*'];
-  const getRandomIndex = Math.floor(Math.random() * operators.length);
-  const randomOperator = operators[getRandomIndex];
+  const randomIndex = Math.floor(Math.random() * operators.length);
+  const randomOperator = operators[randomIndex];
 
   return `${randomNum1} ${randomOperator} ${randomNum2}`;
 };
