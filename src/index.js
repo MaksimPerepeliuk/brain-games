@@ -17,8 +17,7 @@ export default (randomValue, getCorrectAnswer, rules) => {
       return iter(acc + 1);
     }
 
-    console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${userName}!`);
-    return iter(acc);
+    return console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.\nLet's try again, ${userName}!`);
   };
 
   return iter(0);

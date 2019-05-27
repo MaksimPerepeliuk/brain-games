@@ -42,5 +42,15 @@
   "bugs": {
     "url": "https://github.com/MaksimPerepeliuk/project-lvl1-s508/issues"
   },
-  "homepage": "https://github.com/MaksimPerepeliuk/project-lvl1-s508#readme"
+  "homepage": "https://github.com/MaksimPerepeliuk/project-lvl1-s508#readme",
+
+  "keywords": [
+    "brain-games",
+    "brain-even",
+    "brain-calc",
+    "brain-gcd",
+    "brain-progression",
+    "brain-prime",
+    "hexlet project"
+  ]
 }
