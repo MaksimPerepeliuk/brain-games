@@ -3,13 +3,12 @@
 [![Build Status](https://travis-ci.com/MaksimPerepeliuk/project-lvl1-s508.svg?branch=master)](https://travis-ci.com/MaksimPerepeliuk/project-lvl1-s508)
 
 # Install package and start brain-even:
-[![asciicast](https://asciinema.org/a/GlC146LcDtwTb4XNEpt5eoOuB.svg)](https://asciinema.org/a/GlC146LcDtwTb4XNEpt5eoOuB)
+[![asciicast](https://asciinema.org/a/WdODxuSuKdD7D0H14TLgoT9vY.svg)](https://asciinema.org/a/WdODxuSuKdD7D0H14TLgoT9vY)
 # Install package and start brain-calc:
-[![asciicast](https://asciinema.org/a/7ROdzQo8czWEj6iOBbl9S59uz.svg)](https://asciinema.org/a/7ROdzQo8czWEj6iOBbl9S59uz)
+[![asciicast](https://asciinema.org/a/wiED60TPRclSKpFlLuEXv8l63.svg)](https://asciinema.org/a/wiED60TPRclSKpFlLuEXv8l63)
 # Install package and start brain-gcd:
-[![asciicast](https://asciinema.org/a/buzLYs7xAl3AFh3vVC9RSZ23v.svg)](https://asciinema.org/a/buzLYs7xAl3AFh3vVC9RSZ23v)
+[![asciicast](https://asciinema.org/a/xnVz2eSFItIEyeidGgE50t55Z.svg)](https://asciinema.org/a/xnVz2eSFItIEyeidGgE50t55Z)
 # Install package and start brain-progression:
-[![asciicast](https://asciinema.org/a/Fh22T9iVv4nsZ1j31KeZu9Fp5.svg)](https://asciinema.org/a/Fh22T9iVv4nsZ1j31KeZu9Fp5)
+[![asciicast](https://asciinema.org/a/jkc1ka3RrtjngEENwSJt4WSCc.svg)](https://asciinema.org/a/jkc1ka3RrtjngEENwSJt4WSCc)
 # Install package and start brain-prime:
-[![asciicast](https://asciinema.org/a/OG85bG6Ji3VBm8N8vLqKyHt0m.svg)](https://asciinema.org/a/OG85bG6Ji3VBm8N8vLqKyHt0m)
-
+[![asciicast](https://asciinema.org/a/Y0qEp27BUEyjfII34WJMXuO6O.svg)](https://asciinema.org/a/Y0qEp27BUEyjfII34WJMXuO6O)
