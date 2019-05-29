@@ -12,8 +12,8 @@ const getStrWithRandomValue = () => {
 };
 
 const getCorrectAnswer = (randomValue) => {
-  const arr = randomValue.split(' ');
-  const [number1, operator, number2] = arr;
+  const arrFromString = randomValue.split(' ');
+  const [number1, operator, number2] = arrFromString;
   switch (operator) {
     case '+':
       return Number(number1) + Number(number2);
@@ -27,9 +27,9 @@ const getCorrectAnswer = (randomValue) => {
 };
 
 const getQuestionAndCorrectAnswer = () => {
-  const randomValue = getStrWithRandomValue();
+  const strWithRandomValue = getStrWithRandomValue();
 
-  return { question: randomValue, correct: getCorrectAnswer(randomValue) };
+  return { question: strWithRandomValue, correct: getCorrectAnswer(strWithRandomValue) };
 };
 
 export default makeGame(getQuestionAndCorrectAnswer, 'What is the result of the expression?');
