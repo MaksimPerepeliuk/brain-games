@@ -1,6 +1,9 @@
-export const getRandomValue = () => {
-  const randomNum1 = Math.floor(Math.random() * 50);
-  const randomNum2 = Math.floor(Math.random() * 50);
+import makeGame from '..';
+import getRandomValue from '../random';
+
+const getStrWithRandomValue = () => {
+  const randomNum1 = getRandomValue();
+  const randomNum2 = getRandomValue();
   const operators = ['+', '-', '*'];
   const randomIndex = Math.floor(Math.random() * operators.length);
   const randomOperator = operators[randomIndex];
@@ -8,7 +11,7 @@ export const getRandomValue = () => {
   return `${randomNum1} ${randomOperator} ${randomNum2}`;
 };
 
-export const getCorrectAnswer = (randomValue) => {
+const getCorrectAnswer = (randomValue) => {
   const arr = randomValue.split(' ');
   const [number1, operator, number2] = arr;
   switch (operator) {
@@ -22,3 +25,11 @@ export const getCorrectAnswer = (randomValue) => {
       return undefined;
   }
 };
+
+const getQuestionAndCorrectAnswer = () => {
+  const randomValue = getStrWithRandomValue();
+
+  return { question: randomValue, correct: getCorrectAnswer(randomValue) };
+};
+
+export default makeGame(getQuestionAndCorrectAnswer, 'What is the result of the expression?');

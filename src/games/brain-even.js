@@ -1,6 +1,13 @@
-export const getRandomValue = () => Math.floor(Math.random() * 50);
+import makeGame from '..';
+import getRandomValue from '../random';
 
-export const getCorrectAnswer = (randomValue) => {
-  const correctAnswer = randomValue % 2 === 0 ? 'yes' : 'no';
-  return correctAnswer;
+const isEven = randomValue => randomValue % 2 === 0;
+
+const getQuestionAndCorrectAnswer = () => {
+  const randomValue = getRandomValue();
+  const correctAnswer = isEven(randomValue) ? 'yes' : 'no';
+
+  return { question: randomValue, correct: correctAnswer };
 };
+
+export default makeGame(getQuestionAndCorrectAnswer, 'Answer "yes" if number even otherwise answer "no".');

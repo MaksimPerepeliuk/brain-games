@@ -1,5 +1,4 @@
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/codeclimate/codeclimate/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/c7ecba32594932752457/maintainability)](https://codeclimate.com/github/MaksimPerepeliuk/project-lvl1-s508/maintainability)
 [![Build Status](https://travis-ci.com/MaksimPerepeliuk/project-lvl1-s508.svg?branch=master)](https://travis-ci.com/MaksimPerepeliuk/project-lvl1-s508)
 
 # Install package and start brain-even:

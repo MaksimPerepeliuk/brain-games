@@ -1,15 +1,19 @@
+import makeGame from '..';
+import getRandomValue from '../random';
+
 const getStrWithHideRandomNum = (series) => {
   const seriesArr = series;
   const randomIndex = Math.floor(Math.random() * series.length);
+  const hideNum = seriesArr[randomIndex];
   seriesArr[randomIndex] = '..';
   const stringFromSeries = series.join(' ');
 
-  return stringFromSeries;
+  return { question: stringFromSeries, correct: hideNum };
 };
 
-export const getSeriesNumber = () => {
-  const startNum = Math.floor(Math.random() * 20);
-  const stepProgression = Math.floor(Math.random() * 50);
+const getSeriesNumber = () => {
+  const startNum = getRandomValue();
+  const stepProgression = getRandomValue();
   const iter = (stepNum, acc) => {
     if (acc.length === 10) {
       return getStrWithHideRandomNum(acc);
@@ -21,14 +25,4 @@ export const getSeriesNumber = () => {
   return iter(startNum + stepProgression, [startNum]);
 };
 
-export const getCorrectAnswer = (seriesNum) => {
-  const seriesNumArr = seriesNum.split(' ');
-  const hideNumIndex = seriesNumArr.indexOf('..');
-  const arrWithoutHide = seriesNumArr.filter(elem => elem !== '..');
-  const stepProgression = arrWithoutHide[1] - arrWithoutHide[0];
-  if (hideNumIndex === 0) {
-    return seriesNumArr[1] - stepProgression;
-  }
-
-  return Number(seriesNumArr[hideNumIndex - 1]) + stepProgression;
-};
+export default makeGame(getSeriesNumber, 'What number is missing in the progression?');
