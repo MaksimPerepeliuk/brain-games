@@ -19,7 +19,7 @@ brain-prime:
 	npx babel-node src/bin/brain-prime.js
 
 publish:
-	npm publish --dry-run
+	npm publish
 
 make lint:
 	npx eslint .

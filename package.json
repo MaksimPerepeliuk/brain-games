@@ -1,6 +1,6 @@
 {
   "name": "my_project_brain_games",
-  "version": "1.7.5",
+  "version": "1.7.6",
   "description": "hexlet project #1 'brain-games'",
   "bin": {
     "brain-even": "dist/bin/brain-even.js",
@@ -41,7 +41,6 @@
     "url": "https://github.com/MaksimPerepeliuk/project-lvl1-s508/issues"
   },
   "homepage": "https://github.com/MaksimPerepeliuk/project-lvl1-s508#readme",
-
   "keywords": [
     "brain-games",
     "brain-even",
