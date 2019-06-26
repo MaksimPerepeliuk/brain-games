@@ -1,13 +1,13 @@
 import makeGame from '..';
 import getRandomValue from '../random';
 
-const isPrime = (randomValue) => {
-  if (randomValue < 2) {
+const isPrime = (value) => {
+  if (value < 2) {
     return false;
   }
 
-  for (let i = 2; i < randomValue; i += 1) {
-    if (randomValue % i === 0) {
+  for (let i = 2; i <= value / 2; i += 1) {
+    if (value % i === 0) {
       return false;
     }
   }
@@ -17,9 +17,9 @@ const isPrime = (randomValue) => {
 
 const getGameData = () => {
   const gameQuestion = getRandomValue();
-  const answer = isPrime(gameQuestion) ? 'yes' : 'no';
+  const correctAnswer = isPrime(gameQuestion) ? 'yes' : 'no';
 
-  return { question: gameQuestion, correctAnswer: answer };
+  return { gameQuestion, correctAnswer };
 };
 
 const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';

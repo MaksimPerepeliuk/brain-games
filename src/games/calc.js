@@ -6,7 +6,7 @@ const operators = ['+', '-', '*'];
 const getCorrectAnswer = (leftOperand, operator, rightOperand) => {
   switch (operator) {
     case '+':
-      return Number(leftOperand) + Number(rightOperand);
+      return leftOperand + rightOperand;
     case '-':
       return leftOperand - rightOperand;
     case '*':
@@ -17,16 +17,14 @@ const getCorrectAnswer = (leftOperand, operator, rightOperand) => {
 };
 
 const getGameData = () => {
-  const randomNum1 = getRandomValue();
-  const randomNum2 = getRandomValue();
+  const leftOperand = getRandomValue();
+  const rightOperand = getRandomValue();
   const randomIndex = getRandomValue(0, operators.length - 1);
   const randomOperator = operators[randomIndex];
-  const gameQuestion = `${randomNum1} ${randomOperator} ${randomNum2}`;
+  const gameQuestion = `${leftOperand} ${randomOperator} ${rightOperand}`;
+  const correctAnswer = getCorrectAnswer(leftOperand, randomOperator, rightOperand);
 
-  return {
-    question: gameQuestion,
-    correctAnswer: getCorrectAnswer(randomNum1, randomOperator, randomNum2),
-  };
+  return { gameQuestion, correctAnswer };
 };
 
 const gameDescription = 'What is the result of the expression?';

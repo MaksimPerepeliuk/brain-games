@@ -1,5 +1,11 @@
 # Brain-games
 ## it is a set of mini-games containing various mathematical tasks
+## installation
+
+```sh
+$ make publish
+$ npm link
+```
 [![Maintainability](https://api.codeclimate.com/v1/badges/c7ecba32594932752457/maintainability)](https://codeclimate.com/github/MaksimPerepeliuk/project-lvl1-s508/maintainability)
 [![Build Status](https://travis-ci.com/MaksimPerepeliuk/project-lvl1-s508.svg?branch=master)](https://travis-ci.com/MaksimPerepeliuk/project-lvl1-s508)
 

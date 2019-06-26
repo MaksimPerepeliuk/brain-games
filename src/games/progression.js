@@ -1,29 +1,37 @@
 import makeGame from '..';
 import getRandomValue from '../random';
 
-const getQuestion = (series) => {
-  const seriesArr = series;
-  const randomIndex = getRandomValue(0, series.length - 1);
-  const hideNum = seriesArr[randomIndex];
-  seriesArr[randomIndex] = '..';
-  const gameQuestion = series.join(' ');
+const progressionLength = 10;
 
-  return { question: gameQuestion, correctAnswer: hideNum };
+const makeGameData = (prog, randomIndex) => {
+  const progression = prog;
+  const correctAnswer = progression[randomIndex];
+  progression[randomIndex] = '..';
+  const gameQuestion = progression.join(' ');
+
+  return { gameQuestion, correctAnswer };
+};
+
+const makeProgression = (startProgression, stepProgression) => {
+  const nextProgValue = startProgression + stepProgression;
+  const iter = (progressionElem, acc) => {
+    if (acc.length === progressionLength) {
+      return acc;
+    }
+
+    return iter(progressionElem + stepProgression, [...acc, progressionElem]);
+  };
+
+  return iter(nextProgValue, [startProgression]);
 };
 
 const getGameData = () => {
-  const startNum = getRandomValue();
+  const startProgression = getRandomValue();
   const stepProgression = getRandomValue();
-  const seriesLength = 10;
-  const iter = (stepNum, acc) => {
-    if (acc.length === seriesLength) {
-      return getQuestion(acc);
-    }
+  const progression = makeProgression(startProgression, stepProgression, progressionLength);
+  const randomIndex = getRandomValue(0, progression.length - 1);
 
-    return iter(stepNum + stepProgression, [...acc, stepNum]);
-  };
-
-  return iter(startNum + stepProgression, [startNum]);
+  return makeGameData(progression, randomIndex);
 };
 
 const gameDescription = 'What number is missing in the progression?';
