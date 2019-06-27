@@ -1,14 +1,15 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/c7ecba32594932752457/maintainability)](https://codeclimate.com/github/MaksimPerepeliuk/project-lvl1-s508/maintainability)
+[![Build Status](https://travis-ci.com/MaksimPerepeliuk/project-lvl1-s508.svg?branch=master)](https://travis-ci.com/MaksimPerepeliuk/project-lvl1-s508)
+
 # Brain-games
 ## it is a set of mini-games containing various mathematical tasks
+
 ## installation
 
 ```sh
 $ make publish
 $ npm link
 ```
-[![Maintainability](https://api.codeclimate.com/v1/badges/c7ecba32594932752457/maintainability)](https://codeclimate.com/github/MaksimPerepeliuk/project-lvl1-s508/maintainability)
-[![Build Status](https://travis-ci.com/MaksimPerepeliuk/project-lvl1-s508.svg?branch=master)](https://travis-ci.com/MaksimPerepeliuk/project-lvl1-s508)
-
 # Install package and start brain-even:
 [![asciicast](https://asciinema.org/a/WdODxuSuKdD7D0H14TLgoT9vY.svg)](https://asciinema.org/a/WdODxuSuKdD7D0H14TLgoT9vY)
 # Install package and start brain-calc:

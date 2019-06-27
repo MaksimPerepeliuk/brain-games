@@ -3,7 +3,7 @@ import getRandomValue from '../random';
 
 const operators = ['+', '-', '*'];
 
-const getCorrectAnswer = (leftOperand, operator, rightOperand) => {
+const getCorrectAnswer = (leftOperand, rightOperand, operator) => {
   switch (operator) {
     case '+':
       return leftOperand + rightOperand;
@@ -12,7 +12,7 @@ const getCorrectAnswer = (leftOperand, operator, rightOperand) => {
     case '*':
       return leftOperand * rightOperand;
     default:
-      return undefined;
+      return false;
   }
 };
 
@@ -20,9 +20,9 @@ const getGameData = () => {
   const leftOperand = getRandomValue();
   const rightOperand = getRandomValue();
   const randomIndex = getRandomValue(0, operators.length - 1);
-  const randomOperator = operators[randomIndex];
-  const gameQuestion = `${leftOperand} ${randomOperator} ${rightOperand}`;
-  const correctAnswer = getCorrectAnswer(leftOperand, randomOperator, rightOperand);
+  const operator = operators[randomIndex];
+  const gameQuestion = `${leftOperand} ${operator} ${rightOperand}`;
+  const correctAnswer = getCorrectAnswer(leftOperand, rightOperand, operator);
 
   return { gameQuestion, correctAnswer };
 };

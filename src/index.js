@@ -12,19 +12,19 @@ export default (getGameData, description) => {
   const iter = (counter) => {
     if (counter === roundsCount) {
       console.log(`Congratulations, ${userName}!`);
-      return 'you win'; // вернул значение т.к. линтер ругается если не возвращать ничего
+      return;
     }
 
     const { gameQuestion, correctAnswer } = getGameData();
     const userAnswer = readlineSync.question(`Question: ${gameQuestion}: `);
     if (userAnswer === `${correctAnswer}`) {
       console.log('Correct!');
-      return iter(counter + 1);
+      iter(counter + 1);
+      return;
     }
 
     console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
     console.log(`Let's try again, ${userName}!`);
-    return 'you lose'; // вернул значение т.к. линтер ругается если не возвращать ничего
   };
 
   return iter(0);

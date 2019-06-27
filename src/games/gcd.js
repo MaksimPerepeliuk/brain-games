@@ -2,12 +2,12 @@ import makeGame from '..';
 import getRandomValue from '../random';
 
 const getGcd = (num1, num2) => {
-  const iter = (acc) => {
-    if (num1 % acc === 0 && num2 % acc === 0) {
-      return acc;
+  const iter = (counter) => {
+    if (num1 % counter === 0 && num2 % counter === 0) {
+      return counter;
     }
 
-    return iter(acc - 1);
+    return iter(counter - 1);
   };
 
   return iter(num1);
